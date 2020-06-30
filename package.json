@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "run": "node visit.js"
+    "run": "node alert.js"
   },
   "author": "",
   "license": "ISC",

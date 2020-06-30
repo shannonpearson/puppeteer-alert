@@ -19,14 +19,7 @@ WORKDIR /usr/src/code
 COPY . .
 
 RUN npm install 
-#   && groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-#   && mkdir -p /home/pptruser/Downloads \
-#   && chown -R pptruser:pptruser /home/pptruser \
-#   && chown -R pptruser:pptruser /node_modules
 
 EXPOSE 3000
 
-# # Run everything after as non-privileged user.
-# USER pptruser
-
-CMD ["node", "./visit.js"]
+CMD ["node", "./alert.js"]

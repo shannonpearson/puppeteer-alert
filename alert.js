@@ -108,7 +108,7 @@ const S3 = new AWS.S3({
       console.log('No changes found.');
     }
   } catch (error) {
-    console.log(`Error in visit.js: ${error}`);
+    console.log(`Error in alert.js: ${error}`);
     return callback(error);
   } finally {
     if (browser !== null) {
