@@ -26,9 +26,7 @@ const S3 = new AWS.S3({
     });
 
     let page = await browser.newPage();
-    await page.goto(
-      event.url || 'https://www.germany.info/us-en/embassy-consulates/boston'
-    );
+    await page.goto('https://www.germany.info/us-en/embassy-consulates/boston');
     await delay(5000); // because the consulate page has a really dumb auto scroll
 
     const element = await (await page.$('.c-breaking-news--default')).$(
@@ -42,7 +40,7 @@ const S3 = new AWS.S3({
       text = text.trim();
       textHasChanged =
         text !==
-        'The consular and passport secktion of the German Consulate General Boston is now open to the public in a limited capacity.';
+        'The Consulate General will be closed on July 3rd.The consular and passport section of the German Consulate General Boston is now open to the public in a limited capacity.';
     }
 
     if (!element || textHasChanged) {
